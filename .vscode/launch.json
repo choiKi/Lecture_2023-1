@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "name": "https://github.com/Wiseman-IDU/Lecture_2023-1.git",
+            "request": "launch",
+            "url": "https://github.com/Wiseman-IDU/Lecture_2023-1.git"
+        }
+    ]
+}
