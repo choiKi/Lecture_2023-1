@@ -5,8 +5,11 @@ const session = require('express-session');
 const dotenv = require('dotenv');
 const path = require('path');
 
+
 dotenv.config();
 const app = express();
+const indexRouter = require('./routes');
+const userRouter = require('./routes/user');
 app.set('port', process.env.PORT || 3000);
 
 app.use(morgan('dev'));
@@ -27,6 +30,7 @@ app.use(session({
 
 const multer = require('multer');
 const fs = require('fs');
+const { Router } = require('express');
 
 try {
   fs.readdirSync('uploads');
@@ -76,3 +80,4 @@ app.use((err, req, res, next) => {
 app.listen(app.get('port'), () => {
   console.log(app.get('port'), '번 포트에서 대기 중');
 });
+

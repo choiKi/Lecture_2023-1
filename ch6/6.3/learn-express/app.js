@@ -8,6 +8,7 @@ const path = require('path');
 dotenv.config();
 const indexRouter = require('./routes');
 const userRouter = require('./routes/user');
+const router = require('./routes');
 
 const app = express();
 app.set('port', process.env.PORT || 3000);
@@ -43,3 +44,9 @@ app.use((err, req, res, next) => {
 app.listen(app.get('port'), () => {
   console.log(app.get('port'), '번 포트에서 대기 중');
 });
+
+router.route('/abc').get((req,res) => {
+  res.send('GET /abc');
+}).post((req,res) => {
+  res.send('POST /abc');
+})
