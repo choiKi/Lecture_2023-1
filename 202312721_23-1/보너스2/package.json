@@ -1,0 +1,12 @@
+{
+  "name": "bonus02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bonus02.js",
+  "scripts": {
+    "start": "node bonus 02"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
